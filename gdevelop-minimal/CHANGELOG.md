@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.1.5] - 2026-02-20
+
+### Added: Hand-painted CRPG art assets and furnished Inn interior
+
+- Cropped and integrated art from Flux.1-generated concept sheets into individual game assets.
+- **New warrior sprites**: idle, back, walk, attack poses + blue tabard variant.
+- **New furniture**: table, chairs, bar counter, barrel, keg, shelf, fireplace, torches, rug, candle, lantern, stairs, bar stools, mug, bottle, doors.
+- **New wall variants**: standard, stone, fireplace alcove, window.
+- **Tiled floor**: dark oak planks tiled to 1024x640.
+- **Title background**: medieval village painting.
+- Composed Inn interior scene with furniture placement: common room (table + chairs + rug), bar area (counter + keg + shelf + stools), fireplace wall, stairs to upper floor, entrance door.
+- Updated `.gitignore` to exclude raw concept art source sheets.
+
+---
 ## [0.1.4] - 2026-02-20
 
 ### Fixed: Inn scene asset rendering and texture references
@@ -40,7 +54,7 @@ The original file was authored manually with a simplified JSON schema that did n
 
 #### Structural Changes
 
-**Platform Configuration (CRITICAL Ã¢â‚¬â€ caused the load failure)**
+**Platform Configuration (CRITICAL ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â caused the load failure)**
 - Added `"platforms": [{"name": "GDevelop JS platform"}]` to `properties`
 - Added `"currentPlatform": "GDevelop JS platform"` to `properties`
 - Without these fields, GDevelop has no platform to initialize and refuses to open the project
@@ -105,9 +119,9 @@ The original file was authored manually with a simplified JSON schema that did n
 - Path confirmed as `"assets/white.png"` (relative to game.json)
 
 #### Files Changed
-- `game.json` Ã¢â‚¬â€ Complete rewrite (5,632 bytes Ã¢â€ â€™ 28,099 bytes)
-- `game.json.bak` Ã¢â‚¬â€ Backup of previous version (will not be committed)
-- `CHANGELOG.md` Ã¢â‚¬â€ Created
+- `game.json` ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â Complete rewrite (5,632 bytes ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ 28,099 bytes)
+- `game.json.bak` ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â Backup of previous version (will not be committed)
+- `CHANGELOG.md` ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â Created
 
 ---
 

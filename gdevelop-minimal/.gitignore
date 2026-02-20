@@ -1,1 +1,9 @@
 ﻿*.bak
+
+# Raw concept art sheets (not game assets)
+assets/image*.jpg
+assets/content.png
+assets/KBal0.jpg
+assets/nVaV8.jpg
+assets/floor_tile_oak.png
+assets/floor_tile_stone.png
