@@ -15,7 +15,7 @@
       {
         "name": "white.png",
         "kind": "image",
-        "file": "gdevelop-minimal/assets/white.png",
+        "file": "assets/white.png",
         "userAdded": true,
         "origin": "gdevelop-file",
         "metadata": ""
