@@ -1,56 +1,44 @@
 # Changelog
 
-## [0.1.6] - 2026-02-20
+## [0.3.0] - 2026-02-20
 
-### Added: Video intro and Inn background overhaul
+### Added: Warrior sprite animations from custom sprite sheets
+- Cropped 9 idle frames from "idle 1.jpg" sprite sheet (3×3 grid) → `warrior_idle_01.png` through `warrior_idle_09.png`
+- Cropped 12 walk frames from "walk 2.jpg" sprite sheet (4×3 grid) → `warrior_walk_01.png` through `warrior_walk_12.png`
+- Background removal using parchment color detection + scipy blob isolation to strip text labels
+- All frames at 160×240px with transparent backgrounds, bottom-aligned (feet on ground)
+- WarriorBody now has two named animations:
+  - **Idle**: 9 frames, looping at 0.15s/frame
+  - **Walk**: 12 frames, looping at 0.08s/frame
+- Raw sprite sheets added to `.gitignore` (not committed as game assets)
 
-- **Title video**: `crpgtitle.mp4` plays after clicking "New Game", then fades to black and transitions to Inn scene.
-- **Event flow**: title still image -> click New Game -> hide text, play video -> video ends -> 1.5s fade to black -> change scene to Inn.
-- **Inn background**: replaced individual furniture sprites with single coherent painted interior (`inn_background.png`).
-- Added `FadeOverlay` sprite with opacity tween for smooth scene transitions.
-- Added `VideoPlaying` scene variable to track title screen state machine.
+### Changed: Warrior instance scaled to match background
+- WarriorBody instance scaled from 24×48 → 80×120 → 160×240 → 200×300 → **260×400** to match the scale of background environment
+- Positioned at (450, 200) so feet land at y=600 on the inn floor
 
----
-## [0.1.5] - 2026-02-20
-
-### Added: Hand-painted CRPG art assets and furnished Inn interior
-
-- Cropped and integrated art from Flux.1-generated concept sheets into individual game assets.
-- **New warrior sprites**: idle, back, walk, attack poses + blue tabard variant.
-- **New furniture**: table, chairs, bar counter, barrel, keg, shelf, fireplace, torches, rug, candle, lantern, stairs, bar stools, mug, bottle, doors.
-- **New wall variants**: standard, stone, fireplace alcove, window.
-- **Tiled floor**: dark oak planks tiled to 1024x640.
-- **Title background**: medieval village painting.
-- Composed Inn interior scene with furniture placement: common room (table + chairs + rug), bar area (counter + keg + shelf + stools), fireplace wall, stairs to upper floor, entrance door.
-- Updated `.gitignore` to exclude raw concept art source sheets.
+### Changed: Inn background updated to empty room
+- Replaced `inn_background.png` (had NPCs baked into the image) with new `inn_background.jpg` (1376×752)
+- New background is an empty tavern interior: stone fireplace, wooden bar with bottles, table with stools, lantern, bench — no characters painted in
+- Floor object and instance updated to reference the new JPG and match its dimensions
 
 ---
-## [0.1.4] - 2026-02-20
 
-### Fixed: Inn scene asset rendering and texture references
+## [0.2.0] - 2026-02-20
 
-- Regenerated placeholder art assets with proper dimensions and dark-CRPG styling for title/inn readability.
-- Added `assets/wall_gray_v.png` and wired side walls to a vertical wall texture.
-- Normalized Inn sprite `image` references in `game.json` to resource names (fixes GDevelop missing-texture placeholder rendering).
-- Updated Inn camera target to improve initial room framing.
+### Added: Title screen video integration
+- Added `crpgtitle.mp4` as a video resource
+- Title screen now plays the MP4 video in a loop as the background
+- Title text (`TitleText`, `NewGameText`, `VersionText`) overlays on top of the video at z-order 10
+- DarkBG (still image) hidden on scene start, video plays immediately with looping enabled
 
----
-## [0.1.3] - 2026-02-20
+### Fixed: Title screen auto-skip to Inn
+- GDevelop timers start counting from scene load, so the `Timer > 2` condition for scene change was firing immediately
+- Added `Transitioning` guard variable: scene change timer only checks when `Transitioning = 1`, which is only set on New Game click
+- Flow: New Game click → set Transitioning=1 → 1.5s fade to black → after 2s timer → change scene to Inn
 
-### Fixed: JSON-only compatibility and event repair
-
-- Replaced invalid/missing Start scene mouse condition instruction `SourisBoutonRelache` with `MouseButtonReleased`.
-- Fixed Inn scene camera action parameter mismatch and removed invalid coordinate-as-object usage that caused diagnostics (`Missing objects: 512`).
-- Repaired project open failure by rewriting `game.json` as UTF-8 **without BOM** after edits (strict JSON parser compatibility).
-- Verified `game.json` parses cleanly after changes.
-
----
-## [0.1.2] - 2026-02-20
-
-### Fixed: QA review corrections (see QA_REVIEW.md)
-
-- **Mouse condition corrected**: Start scene event now uses `SourisBoutonRelache` (mouse button released) instead of `SourisBouton` (mouse button held down), matching the spec "On Mouse released" and preventing accidental navigation on drag.
-- **playableDevices populated**: Changed from empty array to `["desktop", "mobile"]`. GDevelop's built-in touch-to-mouse mapping means the existing `SourisBoutonRelache` + `SourisSurObjet` conditions work for both platforms without extra touch events.
+### Changed: Title screen event simplification
+- Removed complex still-image/video loop state machine
+- Simplified to 3 events: init (play video + hide overlay), click (fade + start timer), transition (change scene)
 
 ---
 
@@ -65,7 +53,7 @@ The original file was authored manually with a simplified JSON schema that did n
 
 #### Structural Changes
 
-**Platform Configuration (CRITICAL ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â caused the load failure)**
+**Platform Configuration (CRITICAL — caused the load failure)**
 - Added `"platforms": [{"name": "GDevelop JS platform"}]` to `properties`
 - Added `"currentPlatform": "GDevelop JS platform"` to `properties`
 - Without these fields, GDevelop has no platform to initialize and refuses to open the project
@@ -130,9 +118,9 @@ The original file was authored manually with a simplified JSON schema that did n
 - Path confirmed as `"assets/white.png"` (relative to game.json)
 
 #### Files Changed
-- `game.json` ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â Complete rewrite (5,632 bytes ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ 28,099 bytes)
-- `game.json.bak` ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â Backup of previous version (will not be committed)
-- `CHANGELOG.md` ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â Created
+- `game.json` — Complete rewrite (5,632 bytes → 28,099 bytes)
+- `game.json.bak` — Backup of previous version (will not be committed)
+- `CHANGELOG.md` — Created
 
 ---
 
