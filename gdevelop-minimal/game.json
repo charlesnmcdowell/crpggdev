@@ -342,7 +342,7 @@
             {
               "type": {
                 "inverted": false,
-                "value": "SourisBoutonRelache"
+                "value": "MouseButtonReleased"
               },
               "parameters": [
                 "",
@@ -934,12 +934,7 @@
                 "inverted": false,
                 "value": "CentreCamera"
               },
-              "parameters": [
-                "",
-                "512",
-                "320",
-                ""
-              ],
+              "parameters": ["", "WarriorBody"],
               "subInstructions": []
             }
           ],
@@ -980,3 +975,4 @@
   "externalLayouts": [],
   "externalSourceFiles": []
 }
+
