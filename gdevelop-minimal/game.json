@@ -67,6 +67,56 @@
         "name": "white.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "name": "floor_brown.png",
+        "kind": "image",
+        "file": "assets/floor_brown.png",
+        "userAdded": true,
+        "origin": "gdevelop-file",
+        "metadata": "",
+        "alwaysLoaded": false,
+        "smoothed": true
+      },
+      {
+        "name": "wall_gray.png",
+        "kind": "image",
+        "file": "assets/wall_gray.png",
+        "userAdded": true,
+        "origin": "gdevelop-file",
+        "metadata": "",
+        "alwaysLoaded": false,
+        "smoothed": true
+      },
+      {
+        "name": "bedroom_dark.png",
+        "kind": "image",
+        "file": "assets/bedroom_dark.png",
+        "userAdded": true,
+        "origin": "gdevelop-file",
+        "metadata": "",
+        "alwaysLoaded": false,
+        "smoothed": true
+      },
+      {
+        "name": "commonroom_brown.png",
+        "kind": "image",
+        "file": "assets/commonroom_brown.png",
+        "userAdded": true,
+        "origin": "gdevelop-file",
+        "metadata": "",
+        "alwaysLoaded": false,
+        "smoothed": true
+      },
+      {
+        "name": "warrior_blue.png",
+        "kind": "image",
+        "file": "assets/warrior_blue.png",
+        "userAdded": true,
+        "origin": "gdevelop-file",
+        "metadata": "",
+        "alwaysLoaded": false,
+        "smoothed": true
       }
     ],
     "resourceFolders": []
@@ -281,19 +331,7 @@
               "subInstructions": []
             }
           ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ChangeColor"
-              },
-              "parameters": [
-                "DarkBG",
-                "\"13;13;20\""
-              ],
-              "subInstructions": []
-            }
-          ],
+          "actions": [],
           "events": []
         },
         {
@@ -414,7 +452,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "white.png",
+                      "image": "assets/floor_brown.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -454,7 +492,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "white.png",
+                      "image": "assets/wall_gray.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -494,7 +532,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "white.png",
+                      "image": "assets/wall_gray.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -534,7 +572,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "white.png",
+                      "image": "assets/wall_gray.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -574,7 +612,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "white.png",
+                      "image": "assets/wall_gray.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -614,7 +652,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "white.png",
+                      "image": "assets/bedroom_dark.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -654,7 +692,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "white.png",
+                      "image": "assets/commonroom_brown.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -694,7 +732,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "white.png",
+                      "image": "assets/warrior_blue.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -901,94 +939,6 @@
                 "512",
                 "320",
                 ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ChangeColor"
-              },
-              "parameters": [
-                "Floor",
-                "\"90;71;54\""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ChangeColor"
-              },
-              "parameters": [
-                "NorthWall",
-                "\"128;131;140\""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ChangeColor"
-              },
-              "parameters": [
-                "SouthWall",
-                "\"128;131;140\""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ChangeColor"
-              },
-              "parameters": [
-                "WestWall",
-                "\"128;131;140\""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ChangeColor"
-              },
-              "parameters": [
-                "EastWall",
-                "\"128;131;140\""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ChangeColor"
-              },
-              "parameters": [
-                "Bedroom",
-                "\"64;53;43\""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ChangeColor"
-              },
-              "parameters": [
-                "CommonRoom",
-                "\"76;62;49\""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ChangeColor"
-              },
-              "parameters": [
-                "WarriorBody",
-                "\"47;128;255\""
               ],
               "subInstructions": []
             }
