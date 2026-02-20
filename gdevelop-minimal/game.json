@@ -381,10 +381,10 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/inn_background.png",
+        "file": "assets/inn_background.jpg",
         "kind": "image",
         "metadata": "",
-        "name": "inn_background.png",
+        "name": "inn_background.jpg",
         "smoothed": true,
         "userAdded": false
       },
@@ -1143,7 +1143,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "inn_background.png",
+                      "image": "inn_background.jpg",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -1581,11 +1581,11 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 640,
+          "height": 752,
           "layer": "",
           "locked": false,
           "name": "Floor",
-          "width": 1024,
+          "width": 1376,
           "x": 0,
           "y": 0,
           "zOrder": 0,
@@ -1601,8 +1601,8 @@
           "locked": false,
           "name": "WarriorBody",
           "width": 200,
-          "x": 430,
-          "y": 220,
+          "x": 550,
+          "y": 400,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
