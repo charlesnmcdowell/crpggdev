@@ -605,7 +605,13 @@
         "windowMask": false
       },
       "objectsGroups": [],
-      "variables": [],
+      "variables": [
+        {
+          "name": "Transitioning",
+          "type": "number",
+          "value": "0"
+        }
+      ],
       "objects": [
         {
           "name": "DarkBG",
@@ -920,6 +926,18 @@
                 "yes"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "Transitioning",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -950,9 +968,33 @@
                 ""
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
+                "Transitioning",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
             }
           ],
           "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "Transitioning",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            },
             {
               "type": {
                 "inverted": false,
@@ -986,6 +1028,18 @@
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
+                "Transitioning",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            },
             {
               "type": {
                 "inverted": false,
@@ -1542,13 +1596,13 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 240,
+          "height": 300,
           "layer": "",
           "locked": false,
           "name": "WarriorBody",
-          "width": 160,
-          "x": 450,
-          "y": 280,
+          "width": 200,
+          "x": 430,
+          "y": 220,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
