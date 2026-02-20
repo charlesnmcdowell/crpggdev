@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.1.2] - 2026-02-20
+
+### Fixed: QA review corrections (see QA_REVIEW.md)
+
+- **Mouse condition corrected**: Start scene event now uses `SourisBoutonRelache` (mouse button released) instead of `SourisBouton` (mouse button held down), matching the spec "On Mouse released" and preventing accidental navigation on drag.
+- **playableDevices populated**: Changed from empty array to `["desktop", "mobile"]`. GDevelop's built-in touch-to-mouse mapping means the existing `SourisBoutonRelache` + `SourisSurObjet` conditions work for both platforms without extra touch events.
+
+---
+
 ## [0.1.1] - 2026-02-20
 
 ### Fixed: Complete game.json rewrite to valid GDevelop 5 format
