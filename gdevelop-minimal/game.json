@@ -1,0 +1,96 @@
+{
+  "gdVersion": { "major": 5, "minor": 0, "build": 0 },
+  "properties": {
+    "projectUuid": "crpg-gdevelop-minimal-0001",
+    "name": "CRPG GDevelop Minimal",
+    "version": "0.1-minimal",
+    "packageName": "com.example.crpgminimal",
+    "orientation": "",
+    "firstLayout": "Start",
+    "windowWidth": 1024,
+    "windowHeight": 640
+  },
+  "resources": {
+    "resources": [
+      {
+        "name": "white.png",
+        "kind": "image",
+        "file": "gdevelop-minimal/assets/white.png",
+        "userAdded": true,
+        "origin": "gdevelop-file",
+        "metadata": ""
+      }
+    ]
+  },
+  "objects": [],
+  "externalEvents": [],
+  "externalLayouts": [],
+  "eventsFunctionsExtensions": [],
+  "layouts": [
+    {
+      "name": "Start",
+      "uiSettings": { "grid": { "width": 32, "height": 32 }, "snap": true },
+      "objects": [
+        { "name": "DarkBG", "type": "Sprite", "animations": [ { "name": "", "frames": [ { "image": "white.png" } ] } ] },
+        { "name": "TitleText", "type": "TextObject::Text", "bold": false, "italic": false, "underlined": false, "smoothed": true, "fontSize": 56, "color": { "r": 255, "g": 255, "b": 255 }, "string": "CRPG DEMO" },
+        { "name": "NewGameText", "type": "TextObject::Text", "bold": false, "italic": false, "underlined": false, "smoothed": true, "fontSize": 36, "color": { "r": 255, "g": 255, "b": 255 }, "string": "New Game" },
+        { "name": "VersionText", "type": "TextObject::Text", "bold": false, "italic": false, "underlined": false, "smoothed": true, "fontSize": 14, "color": { "r": 255, "g": 255, "b": 255 }, "string": "v0.1-minimal" }
+      ],
+      "instances": [
+        { "objectName": "DarkBG", "x": 0, "y": 0, "zOrder": 0, "layer": "", "angle": 0, "hidden": false, "locked": false, "customSize": true, "width": 1024, "height": 640, "tint": "13;13;20" },
+        { "objectName": "TitleText", "x": 512, "y": 180, "zOrder": 1, "layer": "", "angle": 0, "hidden": false, "locked": false, "centered": true },
+        { "objectName": "NewGameText", "x": 512, "y": 280, "zOrder": 1, "layer": "", "angle": 0, "hidden": false, "locked": false, "centered": true },
+        { "objectName": "VersionText", "x": 894, "y": 604, "zOrder": 1, "layer": "", "angle": 0, "hidden": false, "locked": false }
+      ],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            { "type": "SourisBoutonRelache", "inverted": false, "parameters": ["Left"] },
+            { "type": "SourisSurObjet", "inverted": false, "parameters": ["NewGameText", ""], "objectNames": ["NewGameText"] }
+          ],
+          "actions": [
+            { "type": "SceneChange", "parameters": ["Inn", "", ""] }
+          ],
+          "events": []
+        }
+      ],
+      "layers": [ { "name": "" } ]
+    },
+    {
+      "name": "Inn",
+      "uiSettings": { "grid": { "width": 32, "height": 32 }, "snap": true },
+      "objects": [
+        { "name": "Floor", "type": "Sprite", "animations": [ { "frames": [ { "image": "white.png" } ] } ] },
+        { "name": "NorthWall", "type": "Sprite", "animations": [ { "frames": [ { "image": "white.png" } ] } ] },
+        { "name": "SouthWall", "type": "Sprite", "animations": [ { "frames": [ { "image": "white.png" } ] } ] },
+        { "name": "WestWall", "type": "Sprite", "animations": [ { "frames": [ { "image": "white.png" } ] } ] },
+        { "name": "EastWall", "type": "Sprite", "animations": [ { "frames": [ { "image": "white.png" } ] } ] },
+        { "name": "Bedroom", "type": "Sprite", "animations": [ { "frames": [ { "image": "white.png" } ] } ] },
+        { "name": "CommonRoom", "type": "Sprite", "animations": [ { "frames": [ { "image": "white.png" } ] } ] },
+        { "name": "WarriorBody", "type": "Sprite", "animations": [ { "frames": [ { "image": "white.png" } ] } ] },
+        { "name": "WarriorLabel", "type": "TextObject::Text", "fontSize": 16, "color": { "r": 255, "g": 255, "b": 255 }, "string": "Warrior" }
+      ],
+      "instances": [
+        { "objectName": "Floor", "x": 0, "y": 0, "zOrder": 0, "customSize": true, "width": 1024, "height": 640, "tint": "90;71;54" },
+        { "objectName": "NorthWall", "x": 0, "y": 0, "zOrder": 1, "customSize": true, "width": 1024, "height": 24, "tint": "128;131;140" },
+        { "objectName": "SouthWall", "x": 0, "y": 616, "zOrder": 1, "customSize": true, "width": 1024, "height": 24, "tint": "128;131;140" },
+        { "objectName": "WestWall", "x": 0, "y": 0, "zOrder": 1, "customSize": true, "width": 24, "height": 640, "tint": "128;131;140" },
+        { "objectName": "EastWall", "x": 1000, "y": 0, "zOrder": 1, "customSize": true, "width": 24, "height": 640, "tint": "128;131;140" },
+        { "objectName": "Bedroom", "x": 72, "y": 72, "zOrder": 2, "customSize": true, "width": 240, "height": 160, "tint": "64;53;43" },
+        { "objectName": "CommonRoom", "x": 360, "y": 120, "zOrder": 2, "customSize": true, "width": 560, "height": 360, "tint": "76;62;49" },
+        { "objectName": "WarriorBody", "x": 160, "y": 140, "zOrder": 3, "customSize": true, "width": 24, "height": 48, "tint": "47;128;255" },
+        { "objectName": "WarriorLabel", "x": 150, "y": 112, "zOrder": 4 }
+      ],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [ { "type": "SceneBegin", "inverted": false, "parameters": [] } ],
+          "actions": [ { "type": "CameraCenter", "parameters": ["", "512", "320", ""] } ],
+          "events": []
+        }
+      ],
+      "layers": [ { "name": "" } ]
+    }
+  ]
+}
