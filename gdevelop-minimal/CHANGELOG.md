@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.1.6] - 2026-02-20
+
+### Added: Video intro and Inn background overhaul
+
+- **Title video**: `crpgtitle.mp4` plays after clicking "New Game", then fades to black and transitions to Inn scene.
+- **Event flow**: title still image -> click New Game -> hide text, play video -> video ends -> 1.5s fade to black -> change scene to Inn.
+- **Inn background**: replaced individual furniture sprites with single coherent painted interior (`inn_background.png`).
+- Added `FadeOverlay` sprite with opacity tween for smooth scene transitions.
+- Added `VideoPlaying` scene variable to track title screen state machine.
+
+---
 ## [0.1.5] - 2026-02-20
 
 ### Added: Hand-painted CRPG art assets and furnished Inn interior
@@ -54,7 +65,7 @@ The original file was authored manually with a simplified JSON schema that did n
 
 #### Structural Changes
 
-**Platform Configuration (CRITICAL ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â caused the load failure)**
+**Platform Configuration (CRITICAL ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â caused the load failure)**
 - Added `"platforms": [{"name": "GDevelop JS platform"}]` to `properties`
 - Added `"currentPlatform": "GDevelop JS platform"` to `properties`
 - Without these fields, GDevelop has no platform to initialize and refuses to open the project
@@ -119,9 +130,9 @@ The original file was authored manually with a simplified JSON schema that did n
 - Path confirmed as `"assets/white.png"` (relative to game.json)
 
 #### Files Changed
-- `game.json` ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â Complete rewrite (5,632 bytes ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ 28,099 bytes)
-- `game.json.bak` ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â Backup of previous version (will not be committed)
-- `CHANGELOG.md` ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â Created
+- `game.json` ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â Complete rewrite (5,632 bytes ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ 28,099 bytes)
+- `game.json.bak` ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â Backup of previous version (will not be committed)
+- `CHANGELOG.md` ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â Created
 
 ---
 
