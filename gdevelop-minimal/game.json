@@ -405,6 +405,174 @@
         "name": "black_overlay.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "kind": "image",
+        "metadata": "",
+        "name": "warrior_idle_01.png",
+        "smoothed": true,
+        "userAdded": true,
+        "file": "assets/warrior_idle_01.png"
+      },
+      {
+        "kind": "image",
+        "metadata": "",
+        "name": "warrior_idle_02.png",
+        "smoothed": true,
+        "userAdded": true,
+        "file": "assets/warrior_idle_02.png"
+      },
+      {
+        "kind": "image",
+        "metadata": "",
+        "name": "warrior_idle_03.png",
+        "smoothed": true,
+        "userAdded": true,
+        "file": "assets/warrior_idle_03.png"
+      },
+      {
+        "kind": "image",
+        "metadata": "",
+        "name": "warrior_idle_04.png",
+        "smoothed": true,
+        "userAdded": true,
+        "file": "assets/warrior_idle_04.png"
+      },
+      {
+        "kind": "image",
+        "metadata": "",
+        "name": "warrior_idle_05.png",
+        "smoothed": true,
+        "userAdded": true,
+        "file": "assets/warrior_idle_05.png"
+      },
+      {
+        "kind": "image",
+        "metadata": "",
+        "name": "warrior_idle_06.png",
+        "smoothed": true,
+        "userAdded": true,
+        "file": "assets/warrior_idle_06.png"
+      },
+      {
+        "kind": "image",
+        "metadata": "",
+        "name": "warrior_idle_07.png",
+        "smoothed": true,
+        "userAdded": true,
+        "file": "assets/warrior_idle_07.png"
+      },
+      {
+        "kind": "image",
+        "metadata": "",
+        "name": "warrior_idle_08.png",
+        "smoothed": true,
+        "userAdded": true,
+        "file": "assets/warrior_idle_08.png"
+      },
+      {
+        "kind": "image",
+        "metadata": "",
+        "name": "warrior_idle_09.png",
+        "smoothed": true,
+        "userAdded": true,
+        "file": "assets/warrior_idle_09.png"
+      },
+      {
+        "kind": "image",
+        "metadata": "",
+        "name": "warrior_walk_01.png",
+        "smoothed": true,
+        "userAdded": true,
+        "file": "assets/warrior_walk_01.png"
+      },
+      {
+        "kind": "image",
+        "metadata": "",
+        "name": "warrior_walk_02.png",
+        "smoothed": true,
+        "userAdded": true,
+        "file": "assets/warrior_walk_02.png"
+      },
+      {
+        "kind": "image",
+        "metadata": "",
+        "name": "warrior_walk_03.png",
+        "smoothed": true,
+        "userAdded": true,
+        "file": "assets/warrior_walk_03.png"
+      },
+      {
+        "kind": "image",
+        "metadata": "",
+        "name": "warrior_walk_04.png",
+        "smoothed": true,
+        "userAdded": true,
+        "file": "assets/warrior_walk_04.png"
+      },
+      {
+        "kind": "image",
+        "metadata": "",
+        "name": "warrior_walk_05.png",
+        "smoothed": true,
+        "userAdded": true,
+        "file": "assets/warrior_walk_05.png"
+      },
+      {
+        "kind": "image",
+        "metadata": "",
+        "name": "warrior_walk_06.png",
+        "smoothed": true,
+        "userAdded": true,
+        "file": "assets/warrior_walk_06.png"
+      },
+      {
+        "kind": "image",
+        "metadata": "",
+        "name": "warrior_walk_07.png",
+        "smoothed": true,
+        "userAdded": true,
+        "file": "assets/warrior_walk_07.png"
+      },
+      {
+        "kind": "image",
+        "metadata": "",
+        "name": "warrior_walk_08.png",
+        "smoothed": true,
+        "userAdded": true,
+        "file": "assets/warrior_walk_08.png"
+      },
+      {
+        "kind": "image",
+        "metadata": "",
+        "name": "warrior_walk_09.png",
+        "smoothed": true,
+        "userAdded": true,
+        "file": "assets/warrior_walk_09.png"
+      },
+      {
+        "kind": "image",
+        "metadata": "",
+        "name": "warrior_walk_10.png",
+        "smoothed": true,
+        "userAdded": true,
+        "file": "assets/warrior_walk_10.png"
+      },
+      {
+        "kind": "image",
+        "metadata": "",
+        "name": "warrior_walk_11.png",
+        "smoothed": true,
+        "userAdded": true,
+        "file": "assets/warrior_walk_11.png"
+      },
+      {
+        "kind": "image",
+        "metadata": "",
+        "name": "warrior_walk_12.png",
+        "smoothed": true,
+        "userAdded": true,
+        "file": "assets/warrior_walk_12.png"
       }
     ],
     "resourceFolders": []
@@ -439,7 +607,7 @@
       "objectsGroups": [],
       "variables": [
         {
-          "name": "VideoPlaying",
+          "name": "TitleState",
           "type": "number",
           "value": "0"
         }
@@ -613,7 +781,7 @@
           "width": 1024,
           "x": 0,
           "y": 0,
-          "zOrder": 1,
+          "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -673,7 +841,7 @@
           "width": 1024,
           "x": 0,
           "y": 0,
-          "zOrder": 5,
+          "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -691,7 +859,8 @@
           "zOrder": 100,
           "numberProperties": [],
           "stringProperties": [],
-          "initialVariables": []
+          "initialVariables": [],
+          "opacity": 0
         }
       ],
       "events": [
@@ -715,12 +884,127 @@
             {
               "type": {
                 "inverted": false,
-                "value": "OpacityObject"
+                "value": "AddObjectOpacityTween"
               },
               "parameters": [
                 "FadeOverlay",
+                "\"Init\"",
+                "0",
+                "\"linear\"",
+                "0.01",
+                "no"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "TitleState",
                 "=",
                 "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "\"TitleTimer\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Montre"
+              },
+              "parameters": [
+                "DarkBG",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Montre"
+              },
+              "parameters": [
+                "TitleText",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Montre"
+              },
+              "parameters": [
+                "NewGameText",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Montre"
+              },
+              "parameters": [
+                "VersionText",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
+                "TitleState",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Timer"
+              },
+              "parameters": [
+                "\"TitleTimer\"",
+                ">",
+                "5"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "TitleState",
+                "=",
+                "1"
               ],
               "subInstructions": []
             },
@@ -730,7 +1014,149 @@
                 "value": "Cache"
               },
               "parameters": [
+                "DarkBG"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Play"
+              },
+              "parameters": [
                 "TitleVideo"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
+                "TitleState",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Ended"
+              },
+              "parameters": [
+                "TitleVideo"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "TitleState",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Montre"
+              },
+              "parameters": [
+                "DarkBG",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "\"TitleTimer\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
+                "TitleState",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Timer"
+              },
+              "parameters": [
+                "\"TitleTimer\"",
+                ">",
+                "30"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "TitleState",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Montre"
+              },
+              "parameters": [
+                "DarkBG",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "\"TitleTimer\""
               ],
               "subInstructions": []
             }
@@ -766,13 +1192,13 @@
             },
             {
               "type": {
-                "inverted": false,
+                "inverted": true,
                 "value": "VarScene"
               },
               "parameters": [
-                "VideoPlaying",
+                "TitleState",
                 "=",
-                "0"
+                "10"
               ],
               "subInstructions": []
             }
@@ -784,114 +1210,9 @@
                 "value": "ModVarScene"
               },
               "parameters": [
-                "VideoPlaying",
+                "TitleState",
                 "=",
-                "1"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "Cache"
-              },
-              "parameters": [
-                "TitleText"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "Cache"
-              },
-              "parameters": [
-                "NewGameText"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "Cache"
-              },
-              "parameters": [
-                "VersionText"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "Cache"
-              },
-              "parameters": [
-                "DarkBG"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "Montre"
-              },
-              "parameters": [
-                "TitleVideo",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "Video::Play"
-              },
-              "parameters": [
-                "TitleVideo"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "VarScene"
-              },
-              "parameters": [
-                "VideoPlaying",
-                "=",
-                "1"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "Video::IsEnded"
-              },
-              "parameters": [
-                "TitleVideo"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "VideoPlaying",
-                "=",
-                "2"
+                "10"
               ],
               "subInstructions": []
             },
@@ -909,6 +1230,16 @@
                 "no"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "\"TransitionTimer\""
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -924,21 +1255,21 @@
                 "value": "VarScene"
               },
               "parameters": [
-                "VideoPlaying",
+                "TitleState",
                 "=",
-                "2"
+                "10"
               ],
               "subInstructions": []
             },
             {
               "type": {
                 "inverted": false,
-                "value": "ObjectVariableAsBoolean"
+                "value": "Timer"
               },
               "parameters": [
-                "FadeOverlay",
-                "__Tween_FadeToBlack.HasFinished",
-                "True"
+                "\"TransitionTimer\"",
+                ">",
+                "2"
               ],
               "subInstructions": []
             }
@@ -1064,16 +1395,368 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "Idle",
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": false,
+                  "looping": true,
+                  "timeBetweenFrames": 0.15,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "warrior_idle_01.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "warrior_idle_02.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "warrior_idle_03.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "warrior_idle_04.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "warrior_idle_05.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "warrior_idle_06.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "warrior_idle_07.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "warrior_idle_08.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "warrior_idle_09.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Walk",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "warrior_blue.png",
+                      "image": "warrior_walk_01.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "warrior_walk_02.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "warrior_walk_03.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "warrior_walk_04.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "warrior_walk_05.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "warrior_walk_06.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "warrior_walk_07.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "warrior_walk_08.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "warrior_walk_09.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "warrior_walk_10.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "warrior_walk_11.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "warrior_walk_12.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -1134,13 +1817,13 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 48,
+          "height": 120,
           "layer": "",
           "locked": false,
           "name": "WarriorBody",
-          "width": 24,
+          "width": 80,
           "x": 480,
-          "y": 340,
+          "y": 420,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],

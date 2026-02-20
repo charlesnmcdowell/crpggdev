@@ -7,3 +7,7 @@ assets/KBal0.jpg
 assets/nVaV8.jpg
 assets/floor_tile_oak.png
 assets/floor_tile_stone.png
+
+# Raw sprite sheets (source material, not game assets)
+assets/idle*.jpg
+assets/walk*.jpg
