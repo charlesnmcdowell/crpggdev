@@ -117,6 +117,15 @@
         "metadata": "",
         "alwaysLoaded": false,
         "smoothed": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/wall_gray_v.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "wall_gray_v.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -452,7 +461,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "assets/floor_brown.png",
+                      "image": "floor_brown.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -492,7 +501,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "assets/wall_gray.png",
+                      "image": "wall_gray.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -532,7 +541,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "assets/wall_gray.png",
+                      "image": "wall_gray.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -572,7 +581,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "assets/wall_gray.png",
+                      "image": "wall_gray_v.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -612,7 +621,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "assets/wall_gray.png",
+                      "image": "wall_gray_v.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -652,7 +661,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "assets/bedroom_dark.png",
+                      "image": "bedroom_dark.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -692,7 +701,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "assets/commonroom_brown.png",
+                      "image": "commonroom_brown.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -732,7 +741,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "assets/warrior_blue.png",
+                      "image": "warrior_blue.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -934,7 +943,10 @@
                 "inverted": false,
                 "value": "CentreCamera"
               },
-              "parameters": ["", "WarriorBody"],
+              "parameters": [
+                "",
+                "CommonRoom"
+              ],
               "subInstructions": []
             }
           ],
@@ -975,4 +987,3 @@
   "externalLayouts": [],
   "externalSourceFiles": []
 }
-

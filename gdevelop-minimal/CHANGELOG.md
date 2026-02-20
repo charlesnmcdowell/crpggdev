@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.1.4] - 2026-02-20
+
+### Fixed: Inn scene asset rendering and texture references
+
+- Regenerated placeholder art assets with proper dimensions and dark-CRPG styling for title/inn readability.
+- Added `assets/wall_gray_v.png` and wired side walls to a vertical wall texture.
+- Normalized Inn sprite `image` references in `game.json` to resource names (fixes GDevelop missing-texture placeholder rendering).
+- Updated Inn camera target to improve initial room framing.
+
+---
 ## [0.1.3] - 2026-02-20
 
 ### Fixed: JSON-only compatibility and event repair
@@ -30,7 +40,7 @@ The original file was authored manually with a simplified JSON schema that did n
 
 #### Structural Changes
 
-**Platform Configuration (CRITICAL â€” caused the load failure)**
+**Platform Configuration (CRITICAL Ã¢â‚¬â€ caused the load failure)**
 - Added `"platforms": [{"name": "GDevelop JS platform"}]` to `properties`
 - Added `"currentPlatform": "GDevelop JS platform"` to `properties`
 - Without these fields, GDevelop has no platform to initialize and refuses to open the project
@@ -95,9 +105,9 @@ The original file was authored manually with a simplified JSON schema that did n
 - Path confirmed as `"assets/white.png"` (relative to game.json)
 
 #### Files Changed
-- `game.json` â€” Complete rewrite (5,632 bytes â†’ 28,099 bytes)
-- `game.json.bak` â€” Backup of previous version (will not be committed)
-- `CHANGELOG.md` â€” Created
+- `game.json` Ã¢â‚¬â€ Complete rewrite (5,632 bytes Ã¢â€ â€™ 28,099 bytes)
+- `game.json.bak` Ã¢â‚¬â€ Backup of previous version (will not be committed)
+- `CHANGELOG.md` Ã¢â‚¬â€ Created
 
 ---
 
