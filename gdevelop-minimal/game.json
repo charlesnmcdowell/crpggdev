@@ -1,96 +1,1029 @@
 {
-  "gdVersion": { "major": 5, "minor": 0, "build": 0 },
+  "firstLayout": "Start",
+  "gdVersion": {
+    "build": 0,
+    "major": 5,
+    "minor": 0,
+    "revision": 0
+  },
   "properties": {
-    "projectUuid": "crpg-gdevelop-minimal-0001",
-    "name": "CRPG GDevelop Minimal",
-    "version": "0.1-minimal",
+    "adaptGameResolutionAtRuntime": true,
+    "folderProject": false,
+    "orientation": "landscape",
     "packageName": "com.example.crpgminimal",
-    "orientation": "",
-    "firstLayout": "Start",
+    "projectUuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "scaleMode": "linear",
+    "sizeOnStartupMode": "adaptWidth",
+    "useExternalSourceFiles": false,
+    "version": "0.1.0",
+    "name": "CRPG GDevelop Minimal",
+    "description": "",
+    "author": "",
     "windowWidth": 1024,
-    "windowHeight": 640
+    "windowHeight": 640,
+    "latestCompilationDirectory": "",
+    "maxFPS": 60,
+    "minFPS": 20,
+    "verticalSync": false,
+    "platformSpecificAssets": {},
+    "loadingScreen": {
+      "backgroundColor": 0,
+      "backgroundFadeInDuration": 0.2,
+      "backgroundImageResourceName": "",
+      "gdevelopLogoStyle": "light",
+      "logoAndProgressFadeInDuration": 0.2,
+      "logoAndProgressLogoFadeInDelay": 0.2,
+      "minDuration": 1.5,
+      "progressBarColor": 16777215,
+      "progressBarHeight": 20,
+      "progressBarMaxWidth": 200,
+      "progressBarMinWidth": 40,
+      "progressBarWidthPercent": 30,
+      "showGDevelopSplash": true,
+      "showProgressBar": true
+    },
+    "authorIds": [],
+    "authorUsernames": [],
+    "categories": [],
+    "playableDevices": [],
+    "extensionProperties": [],
+    "platforms": [
+      {
+        "name": "GDevelop JS platform"
+      }
+    ],
+    "currentPlatform": "GDevelop JS platform"
   },
   "resources": {
     "resources": [
       {
-        "name": "white.png",
-        "kind": "image",
+        "alwaysLoaded": false,
         "file": "assets/white.png",
-        "userAdded": true,
-        "origin": "gdevelop-file",
-        "metadata": ""
+        "kind": "image",
+        "metadata": "",
+        "name": "white.png",
+        "smoothed": true,
+        "userAdded": true
       }
-    ]
+    ],
+    "resourceFolders": []
   },
   "objects": [],
-  "externalEvents": [],
-  "externalLayouts": [],
-  "eventsFunctionsExtensions": [],
+  "objectsGroups": [],
+  "variables": [],
   "layouts": [
     {
+      "b": 20,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Start",
       "name": "Start",
-      "uiSettings": { "grid": { "width": 32, "height": 32 }, "snap": true },
+      "r": 13,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 13,
+      "uiSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 1,
+        "windowMask": false
+      },
+      "objectsGroups": [],
+      "variables": [],
       "objects": [
-        { "name": "DarkBG", "type": "Sprite", "animations": [ { "name": "", "frames": [ { "image": "white.png" } ] } ] },
-        { "name": "TitleText", "type": "TextObject::Text", "bold": false, "italic": false, "underlined": false, "smoothed": true, "fontSize": 56, "color": { "r": 255, "g": 255, "b": 255 }, "string": "CRPG DEMO" },
-        { "name": "NewGameText", "type": "TextObject::Text", "bold": false, "italic": false, "underlined": false, "smoothed": true, "fontSize": 36, "color": { "r": 255, "g": 255, "b": 255 }, "string": "New Game" },
-        { "name": "VersionText", "type": "TextObject::Text", "bold": false, "italic": false, "underlined": false, "smoothed": true, "fontSize": 14, "color": { "r": 255, "g": 255, "b": 255 }, "string": "v0.1-minimal" }
+        {
+          "name": "DarkBG",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "white.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "TitleText",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "CRPG DEMO",
+          "font": "",
+          "characterSize": 56,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          }
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "NewGameText",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "New Game",
+          "font": "",
+          "characterSize": 36,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          }
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "VersionText",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "v0.1-minimal",
+          "font": "",
+          "characterSize": 14,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          }
+        }
       ],
       "instances": [
-        { "objectName": "DarkBG", "x": 0, "y": 0, "zOrder": 0, "layer": "", "angle": 0, "hidden": false, "locked": false, "customSize": true, "width": 1024, "height": 640, "tint": "13;13;20" },
-        { "objectName": "TitleText", "x": 512, "y": 180, "zOrder": 1, "layer": "", "angle": 0, "hidden": false, "locked": false, "centered": true },
-        { "objectName": "NewGameText", "x": 512, "y": 280, "zOrder": 1, "layer": "", "angle": 0, "hidden": false, "locked": false, "centered": true },
-        { "objectName": "VersionText", "x": 894, "y": 604, "zOrder": 1, "layer": "", "angle": 0, "hidden": false, "locked": false }
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 640,
+          "layer": "",
+          "locked": false,
+          "name": "DarkBG",
+          "width": 1024,
+          "x": 0,
+          "y": 0,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "TitleText",
+          "width": 0,
+          "x": 350,
+          "y": 180,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "NewGameText",
+          "width": 0,
+          "x": 430,
+          "y": 280,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "VersionText",
+          "width": 0,
+          "x": 894,
+          "y": 604,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
       ],
       "events": [
         {
+          "disabled": false,
+          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
-            { "type": "SourisBoutonRelache", "inverted": false, "parameters": ["Left"] },
-            { "type": "SourisSurObjet", "inverted": false, "parameters": ["NewGameText", ""], "objectNames": ["NewGameText"] }
+            {
+              "type": {
+                "inverted": false,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
           ],
           "actions": [
-            { "type": "SceneChange", "parameters": ["Inn", "", ""] }
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeColor"
+              },
+              "parameters": [
+                "DarkBG",
+                "\"13;13;20\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisBouton"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "NewGameText",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Inn\"",
+                ""
+              ],
+              "subInstructions": []
+            }
           ],
           "events": []
         }
       ],
-      "layers": [ { "name": "" } ]
+      "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": []
     },
     {
+      "b": 54,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Inn",
       "name": "Inn",
-      "uiSettings": { "grid": { "width": 32, "height": 32 }, "snap": true },
+      "r": 90,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 71,
+      "uiSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": true,
+        "zoomFactor": 1,
+        "windowMask": false
+      },
+      "objectsGroups": [],
+      "variables": [],
       "objects": [
-        { "name": "Floor", "type": "Sprite", "animations": [ { "frames": [ { "image": "white.png" } ] } ] },
-        { "name": "NorthWall", "type": "Sprite", "animations": [ { "frames": [ { "image": "white.png" } ] } ] },
-        { "name": "SouthWall", "type": "Sprite", "animations": [ { "frames": [ { "image": "white.png" } ] } ] },
-        { "name": "WestWall", "type": "Sprite", "animations": [ { "frames": [ { "image": "white.png" } ] } ] },
-        { "name": "EastWall", "type": "Sprite", "animations": [ { "frames": [ { "image": "white.png" } ] } ] },
-        { "name": "Bedroom", "type": "Sprite", "animations": [ { "frames": [ { "image": "white.png" } ] } ] },
-        { "name": "CommonRoom", "type": "Sprite", "animations": [ { "frames": [ { "image": "white.png" } ] } ] },
-        { "name": "WarriorBody", "type": "Sprite", "animations": [ { "frames": [ { "image": "white.png" } ] } ] },
-        { "name": "WarriorLabel", "type": "TextObject::Text", "fontSize": 16, "color": { "r": 255, "g": 255, "b": 255 }, "string": "Warrior" }
+        {
+          "name": "Floor",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "white.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "NorthWall",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "white.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "SouthWall",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "white.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "WestWall",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "white.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "EastWall",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "white.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Bedroom",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "white.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CommonRoom",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "white.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "WarriorBody",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "white.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "WarriorLabel",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Warrior",
+          "font": "",
+          "characterSize": 16,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          }
+        }
       ],
       "instances": [
-        { "objectName": "Floor", "x": 0, "y": 0, "zOrder": 0, "customSize": true, "width": 1024, "height": 640, "tint": "90;71;54" },
-        { "objectName": "NorthWall", "x": 0, "y": 0, "zOrder": 1, "customSize": true, "width": 1024, "height": 24, "tint": "128;131;140" },
-        { "objectName": "SouthWall", "x": 0, "y": 616, "zOrder": 1, "customSize": true, "width": 1024, "height": 24, "tint": "128;131;140" },
-        { "objectName": "WestWall", "x": 0, "y": 0, "zOrder": 1, "customSize": true, "width": 24, "height": 640, "tint": "128;131;140" },
-        { "objectName": "EastWall", "x": 1000, "y": 0, "zOrder": 1, "customSize": true, "width": 24, "height": 640, "tint": "128;131;140" },
-        { "objectName": "Bedroom", "x": 72, "y": 72, "zOrder": 2, "customSize": true, "width": 240, "height": 160, "tint": "64;53;43" },
-        { "objectName": "CommonRoom", "x": 360, "y": 120, "zOrder": 2, "customSize": true, "width": 560, "height": 360, "tint": "76;62;49" },
-        { "objectName": "WarriorBody", "x": 160, "y": 140, "zOrder": 3, "customSize": true, "width": 24, "height": 48, "tint": "47;128;255" },
-        { "objectName": "WarriorLabel", "x": 150, "y": 112, "zOrder": 4 }
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 640,
+          "layer": "",
+          "locked": false,
+          "name": "Floor",
+          "width": 1024,
+          "x": 0,
+          "y": 0,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 24,
+          "layer": "",
+          "locked": false,
+          "name": "NorthWall",
+          "width": 1024,
+          "x": 0,
+          "y": 0,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 24,
+          "layer": "",
+          "locked": false,
+          "name": "SouthWall",
+          "width": 1024,
+          "x": 0,
+          "y": 616,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 640,
+          "layer": "",
+          "locked": false,
+          "name": "WestWall",
+          "width": 24,
+          "x": 0,
+          "y": 0,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 640,
+          "layer": "",
+          "locked": false,
+          "name": "EastWall",
+          "width": 24,
+          "x": 1000,
+          "y": 0,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 160,
+          "layer": "",
+          "locked": false,
+          "name": "Bedroom",
+          "width": 240,
+          "x": 72,
+          "y": 72,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 360,
+          "layer": "",
+          "locked": false,
+          "name": "CommonRoom",
+          "width": 560,
+          "x": 360,
+          "y": 120,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 48,
+          "layer": "",
+          "locked": false,
+          "name": "WarriorBody",
+          "width": 24,
+          "x": 160,
+          "y": 140,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WarriorLabel",
+          "width": 0,
+          "x": 150,
+          "y": 112,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
       ],
       "events": [
         {
+          "disabled": false,
+          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [ { "type": "SceneBegin", "inverted": false, "parameters": [] } ],
-          "actions": [ { "type": "CameraCenter", "parameters": ["", "512", "320", ""] } ],
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "CentreCamera"
+              },
+              "parameters": [
+                "",
+                "512",
+                "320",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeColor"
+              },
+              "parameters": [
+                "Floor",
+                "\"90;71;54\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeColor"
+              },
+              "parameters": [
+                "NorthWall",
+                "\"128;131;140\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeColor"
+              },
+              "parameters": [
+                "SouthWall",
+                "\"128;131;140\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeColor"
+              },
+              "parameters": [
+                "WestWall",
+                "\"128;131;140\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeColor"
+              },
+              "parameters": [
+                "EastWall",
+                "\"128;131;140\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeColor"
+              },
+              "parameters": [
+                "Bedroom",
+                "\"64;53;43\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeColor"
+              },
+              "parameters": [
+                "CommonRoom",
+                "\"76;62;49\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeColor"
+              },
+              "parameters": [
+                "WarriorBody",
+                "\"47;128;255\""
+              ],
+              "subInstructions": []
+            }
+          ],
           "events": []
         }
       ],
-      "layers": [ { "name": "" } ]
+      "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": []
     }
-  ]
+  ],
+  "externalEvents": [],
+  "eventsFunctionsExtensions": [],
+  "externalLayouts": [],
+  "externalSourceFiles": []
 }
